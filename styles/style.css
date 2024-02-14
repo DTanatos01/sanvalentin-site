@@ -1,0 +1,61 @@
+body {
+    background-color: black;
+}
+
+.titulo {
+    display: flex;
+    color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    font-size: 6em;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.corazon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table td {
+    width: 3em;
+    height: 3em;
+}
+
+img {
+    border-radius: 2%;
+    width: 3em;
+    height: 3em;
+    filter: drop-shadow(0 0 0.75rem crimson);
+    animation: caida;
+    animation-duration: 1s;
+    animation-delay: calc(.1s * var(--i));
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+span {
+    text-shadow: 1px 1px 2px black, 0 0 1em lightblue, 0 0 0.2em blue;
+    animation: salto 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes salto {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
+@keyframes caida {
+    0% {
+      transform: translateY(-200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
